@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Environmental Awareness Program 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="celebrationMessage" class="celebration hidden">
+    🎉 Congratulations! You Completed All Activities! 🌍💚
+</div>
+<div class="leaf-container"></div>
+
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <button onclick="toggleMusic()">🎵 Music</button>
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3.mp3" type="audio/mpeg">
+</audio>
+<div class="tip-box">
+<h3 id="ecoTip"></h3>
+<button onclick="showEcoTip()">New Tip</button>
+</div>
+<header>
+    <h1>Environmental Awareness Program 2026</h1>
+</header>
+<img src="logo.png.png" class="top-logo" alt="ARUN Logo">
+
+<nav class="navbar">
+    <button class="nav-btn active" onclick="showHome()">🏠 Home</button>
+    <button class="nav-btn" onclick="showActivities()">📋 Activities</button>
+    <button class="nav-btn" onclick="showQuiz()">🧠 Quiz</button>
+    <button class="nav-btn" onclick="showGame()">🎮 Game</button>
+    
+</nav>
+
+<div class="container">
+
+    <!-- HOME SECTION -->
+    <section id="homeSection">
+
+        <div id="quoteBox" class="quote-box"></div>
+
+        <div class="welcome-box">
+<div class="welcome-box">
+    <h2 id="welcomeMessage"></h2>
+</div>
+            <h2 id="welcomeMessage"></h2>
+        </div>
+        <div class="eco-score">
+
+<h3>🌿 Your Eco Points</h3>
+
+<p id="ecoPoints">Points: 0</p>
+
+<p id="ecoLevel">Level: Eco Beginner 🌱</p>
+
+</div>
+
+</section>
+
+
+        <!-- SLIDER -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><h2>Plant More Trees 🌳</h2></div>
+                <div class="slide"><h2>Say No to Plastic ♻</h2></div>
+                <div class="slide"><h2>Save Water 💧</h2></div>
+                <div class="slide"><h2>Clean the Earth 🌍</h2></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ACTIVITY SECTION -->
+    <section id="activitySection" class="hidden">
+
+        <h2>🌿 Eco Activity Tracker</h2>
+
+        <div class="progress-container">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progressBar"></div>
+            </div>
+            <p id="progressText">0 of 5 activities completed</p>
+        </div>
+
+        <div id="activityList" class="activity-grid"></div>
+
+        <button id="certificateBtn" class="hidden" onclick="downloadCertificate()">
+            🏆 Download Certificate
+        </button>
+
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section id="quizSection" class="hidden">
+
+        <h2>🧠 Environmental Quiz</h2>
+
+        <div id="quizContainer"></div>
+
+        <button onclick="submitQuiz()">Submit Quiz</button>
+
+        <h3 id="quizResult"></h3>
+
+    </section>
+    <section id="gameSection" class="hidden">
+    <h2>🎮 Waste Sorting Game</h2>
+
+    <div id="gameItem" class="activity-card"></div>
+
+    <div class="game-buttons">
+        <button onclick="chooseBin('Recycle')">♻ Recycle</button>
+        <button onclick="chooseBin('Compost')">🌱 Compost</button>
+        <button onclick="chooseBin('Hazard')">☢ Hazard</button>
+    </div>
+
+    <h3 id="gameScore">Score: 0</h3>
+</section>
+<section id="plasticGame" class="hidden">
+
+<h2>🌊 Catch the Plastic Game</h2>
+
+<div id="plasticArea" style="height:300px;border:2px dashed #2e8b57;position:relative;">
+</div>
+
+<h3 id="plasticScore">Score: 0</h3>
+
+<button onclick="startPlasticGame()">Start Game</button>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+    <!-- ✅ PASTE USEFUL LINKS HERE (Below Slider) -->
+
+    <div class="useful-links">
+        <h3>🌎 Useful Environmental Resources</h3>
+
+        <ul>
+            <li>
+                <a href="https://www.unep.org/" target="_blank">
+                    United Nations Environment Programme (UNEP)
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.worldwildlife.org/" target="_blank">
+                    World Wildlife Fund (WWF)
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.epa.gov/" target="_blank">
+                    Environmental Protection Agency (EPA)
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.nationalgeographic.com/environment/" target="_blank">
+                    National Geographic – Environment
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- YOUTUBE RESOURCES -->
+<div class="youtube-section">
+    <h3>🎥 Environmental Awareness Videos</h3>
+
+    <div class="video-links">
+
+        <a href="https://www.youtube.com/watch?v=EtW2rrLHs08" target="_blank" class="video-card">
+            ▶ Climate Change Explained – National Geographic
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=Sv7OHfpIRfU" target="_blank" class="video-card">
+            ▶ How To Save Our Planet – David Attenborough
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=QQYgCxu988s" target="_blank" class="video-card">
+            ▶ The Story of Plastic – Environmental Awareness
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=5eTCZ9L834s" target="_blank" class="video-card">
+            ▶ Renewable Energy Explained
+        </a>
+
+    </div>
+</div>
+
+</section>
+    <!-- ACTIVITY SECTION -->
+
+<body>
+
+<header>
+    <h1>Environmental Awareness Program 2026</h1>
+</header>
+
+<div class="container">
+
+    <!-- HOME SECTION -->
+    <section id="homeSection">
+        <h2>🏠 Home</h2>
+        <p>Welcome to Environmental Awareness Program 2026</p>
+    </section>
+
+    <!-- ACTIVITY SECTION -->
+<section id="activitySection" class="hidden">
+
+    <h2>🌿 Eco Activity Tracker</h2>
+
+    <div class="progress-container">
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
+        <p id="progressText">0 of 5 activities completed</p>
+    </div>
+
+    <h3 id="achievementBadge"></h3>
+
+    <div id="activityList"></div>
+
+    <button id="certificateBtn" class="hidden" onclick="downloadCertificate()">
+        🏆 Download Certificate
+    </button>
+
+</section>
+
+    <!-- QUIZ SECTION -->
+<section id="quizSection" class="hidden">
+    <h2>🧠 Environmental Quiz</h2>
+    <div id="quizContainer"></div>
+    <button onclick="submitQuiz()">Submit Quiz</button>
+    <h3 id="quizResult"></h3>
+    <div id="quizCertificate" class="certificate hidden">
+    <div class="certificate-card">
+        <h1>🏆 Certificate of Excellence</h1>
+        <h2>Environmental Awareness Program 2026</h2>
+        <p>This certifies that</p>
+        <h2 id="certName"></h2>
+        <p>has successfully passed the Environmental Quiz</p>
+        <p id="certScore"></p>
+
+        <button onclick="downloadQuizCertificate()">⬇ Download Certificate</button>
+    </div>
+</div>
+</section>
+    <div class="progress-container">
+    <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="quizProgressBar"></div>
+    </div>
+    <p id="quizProgressText">0% Completed</p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+    <!-- Activity Cards -->
+    <div id="activityList" class="activity-grid"></div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<section id="ecoCalendar">
+
+<h2>📅 Environmental Calendar</h2>
+
+<ul class="calendar-list">
+
+<li>🌍 April 22 — Earth Day</li>
+
+<li>🌱 March 21 — International Day of Forests</li>
+
+<li>🌊 June 8 — World Oceans Day</li>
+
+<li>🌿 June 5 — World Environment Day</li>
+
+<li>♻ July 3 — Plastic Bag Free Day</li>
+
+</ul>
+
+</section>
+<div class="challenge-box">
+<h3 id="dailyChallenge"></h3>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<canvas id="ecoChart" width="300"></canvas>
+<section id="lessonSection" class="hidden">
+
+<h2>📚 Interactive Eco Lessons</h2>
+
+<div class="lesson-card">
+<h3>🌍 Climate Change</h3>
+<p>Learn why the Earth is getting warmer.</p>
+
+<button onclick="openLesson()">Start Lesson</button>
+</div>
+
+<div class="lesson-card">
+<h3>♻ Recycling</h3>
+<p>Learn how recycling protects the environment.</p>
+
+<button onclick="startRecycleLesson()">Start Lesson</button>
+</div>
+
+</section>
+<section id="lessonPage" class="hidden">
+
+<h2>🌍 Climate Change Lesson</h2>
+
+<p>
+Climate change happens when greenhouse gases trap heat
+in the Earth's atmosphere. The main gas responsible is
+Carbon Dioxide (CO₂).
+</p>
+
+<button onclick="lessonQuestion()">Next Question</button>
+
+</section>
