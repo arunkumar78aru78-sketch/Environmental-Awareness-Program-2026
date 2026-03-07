@@ -1,0 +1,663 @@
+b/* Apply Poppins to whole website */
+/* ===== GLOBAL FONT STYLE ===== */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    letter-spacing: 0.5px;
+}
+
+/* Main Website Title */
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Section Titles */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Activity Card Titles */
+.activity-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Slider Text */
+.slide h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+/* ===== USEFUL LINKS SECTION ===== */
+
+.useful-links {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.useful-links h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.useful-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.useful-links li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.useful-links a {
+    text-decoration: none;
+    color: #2e8b57;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.useful-links a:hover {
+    color: #1e5631;
+    text-decoration: underline;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== SLIDER ===== */
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.slide:nth-child(1) {
+    background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1600&auto=format");
+}
+
+.slide:nth-child(2) {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format");
+}
+
+.slide:nth-child(3) {
+    background-image: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=1600&auto=format");
+}
+
+.slide:nth-child(4) {
+    background-image: url("https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1600&auto=format");
+}
+
+/* ===== ACTIVITY CARDS ===== */
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.status {
+    font-weight: bold;
+}
+
+.completed {
+    color: green;
+}
+
+.pending {
+    color: orange;
+}
+
+/* ===== PROGRESS BAR ===== */
+
+.progress {
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #2e8b57;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+/* ===== USEFUL LINKS SECTION ===== */
+
+.useful-links {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.useful-links h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #2e8b57;
+}
+
+.useful-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.useful-links li {
+    margin: 12px 0;
+    text-align: center;
+}
+
+.useful-links a {
+    text-decoration: none;
+    color: #2e8b57;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.useful-links a:hover {
+    color: #1e5631;
+    text-decoration: underline;
+}
+/* ===== NEW ACTIVITY TRACKER DESIGN ===== */
+
+.tracker-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+/* Progress Circle */
+/* SIMPLE WORKING PROGRESS BAR */
+
+.progress-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 25px;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #2e8b57;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+/* Grid Layout */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card Style */
+.activity-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Status Badge */
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.completed-badge {
+    background-color: #2e8b57;
+    color: white;
+}
+
+.pending-badge {
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Checkbox Style */
+.activity-card input {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+/* ===== ACTIVITY TRACKER BACKGROUND IMAGE ===== */
+
+#activitySection {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Image */
+#activitySection::before {
+    background: red;
+    opacity: 0.3;
+}
+
+/* Keep content above background */
+#activitySection > * {
+    position: relative;
+    z-index: 1;
+}
+/* ===== MODERN TOGGLE SWITCH ===== */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    margin-top: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider-toggle:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* When Checked */
+.switch input:checked + .slider-toggle {
+    background-color: #2e8b57;
+    box-shadow: 0 0 10px #2e8b57;
+}
+
+.switch input:checked + .slider-toggle:before {
+    transform: translateX(24px);
+}
+/* ===== YOUTUBE SECTION ===== */
+
+.youtube-section {
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.youtube-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2e8b57;
+    font-size: 22px;
+}
+
+.video-links {
+    display: grid;
+    gap: 15px;
+}
+
+.video-card {
+    display: block;
+    text-decoration: none;
+    background: #f4f7f6;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #333;
+    transition: 0.3s ease;
+    border-left: 5px solid #2e8b57;
+}
+
+.video-card:hover {
+    background: #2e8b57;
+    color: white;
+    transform: translateX(5px);
+}
+.welcome-box {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* DARK MODE FULL FIX */
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode nav {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .activity-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .progress-bar-bg {
+    background-color: #333;
+}
+
+body.dark-mode .youtube-section {
+    background-color: #1e1e1e;
+    color: white;
+
+}
+#achievementBadge {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #2e8b57;
+}
+body.dark-mode {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode header,
+body.dark-mode .container,
+body.dark-mode .activity-card,
+body.dark-mode .useful-links,
+body.dark-mode .youtube-section {
+    background-color: #1e1e1e !important;
+    color: white !important;
+}
+.hidden {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+
+.nav-btn.active {
+    background-color: #2e8b57;
+    color: white;
+}
+.celebration {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2e8b57;
+    color: white;
+    padding: 20px 40px;
+    font-size: 22px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+#certificateBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#certificateBtn:hover {
+    background: #256f47;
+}
+.quote-box {
+    text-align: center;
+    font-style: italic;
+    margin: 15px 0;
+    font-size: 18px;
+    color: #2e8b57;
+}
+/* ===== Smooth Fade Animation ===== */
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.activity-card {
+    transition: all 0.4s ease;
+}
+
+.activity-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.progress-bar-fill {
+    transition: width 0.6s ease-in-out;
+}
+.quote-box {
+    transition: opacity 0.5s ease;
+}
+/* ===== PREMIUM ANIMATED BUTTONS ===== */
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #2e8b57, #3cb371);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Hover Animation */
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(46,139,87,0.4);
+}
+
+/* Click Animation */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Shine Effect */
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+button:hover::before {
+    left: 130%;
+}
+.nav-btn.active {
+    background: linear-gradient(45deg, #1e5631, #2e8b57);
+    box-shadow: 0 0 15px rgba(46,139,87,0.6);
+}
+body.dark-mode button:hover {
+    box-shadow: 0 10px 25px rgba(0,255,150,0.4);
+}
+#quizResult {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* ===== GOLD ANIMATED CERTIFICATE ===== */
+
+.certificate-card {
+    position: relative;
+    background: white;
+    padding: 40px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    border: 6px solid transparent;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 🔥 Gold Animated Border */
+.certificate-card::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 25px;
+    padding: 6px;
+    background: linear-gradient(
+        45deg,
+        gold,
+        orange,
+        gold,
+        #ffd700,
+        gold
+    );
+    background-size: 400% 400%;
+    animation: goldGlow 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes goldGlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.top-logo {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    z-index: 1000;
+}
+.game-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.leaf-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+.leaf{
+position:absolute;
+top:-50px;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(100vh) rotate(360deg);
+opacity:0;
+}
+}
+#ecoCalendar{
+margin-top:40px;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.calendar-list{
+list-style:none;
+padding:0;
+}
+
+.calendar-list li{
+padding:10px;
+border-bottom:1px solid #ddd;
+font-weight:500;
+}
+.eco-score{
+background:white;
+padding:15px;
+border-radius:10px;
+margin:20px 0;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
